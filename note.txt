@@ -1,0 +1,45 @@
+quest:-what is characteristic of microservices or advantages
+Ans:-MIcroservices are small,independent,and loosly coupled
+2-Each services are seperate codebase.
+3-It can be deployed independently
+4-Services are responsible for persisting their own data or external state
+5-Services communicate with each other with well defined api.
+6-Services do not need to share same technology stack,libraries or frameworks.
+7-better capabilities
+
+quest:-what is service registry
+quest:-what is api gateway
+
+Advantage of monolithic application
+1-less cross cutting concern .it is developed in single codebase like logging,externalize configuration,health check up and metrics
+2-Easier debugging and testing
+3-easy deployment
+
+Disadvantage
+1-when we scales up,it becomes complicated to understand and manage.
+2-it is tight coupling and not easy to implement new changes
+3-can not scale components independently
+4-new technoloy  barriers
+
+advantage of microservices
+1-small codebase
+2-small and focused team'
+3-mix technologies
+4-fault isolation
+6-scalability
+7-data isolation
+8-Agility
+
+disadvantage of microservice
+1-Extra complexity
+2-system distribution
+3-cross cutting concern
+4=testing
+
+@ComponentScan:-it is used to scan the package for a  bean.it is used with @Configuration annotation.
+@Component: It is a class-level annotation. It is used to mark a Java class as a bean.
+@EnableAutoConfiguration: It auto-configures the bean that is present in the classpath
+@Configuration: It is a class-level annotation. The class annotated with @Configuration used by Spring Containers as a source of bean definitions.
+
+@RestController:-if we annotate a class with this annotation.it means that this class will handle the http request.
+@RequestMapping:-any http request having "/something" will land on this class.
