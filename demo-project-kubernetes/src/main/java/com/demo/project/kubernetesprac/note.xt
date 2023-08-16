@@ -1,0 +1,59 @@
+Why we use kubernetes
+
+for auto-completion ,installed the below package
+[iid@iid ~]$ sudo install bash-completion
+>>echo $SHELL
+[iid@iid ~]$ kubectl completion bash
+>cd .kube
+and the
+[iid@iid .kube]$ kubectl completion bash >> kubecom.sh
+[iid@iid ~]$ source /home/iid/.kube/kubecom.sh
+=====generator command==========================================================================
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl run firstpod  --image=coolgourav147/nginx-custom
+>>>kubectl api-resources       :-this command providees us the short name of kubernetes object.
+>>kubectl get nodes
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl get pod -o wide
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl get pod -o yaml or json       --output in yaml format
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl explain  resourcename like pod ,namespace etc.
+>>>>kubectl describe pod pod_name or anyresourcename
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl label pod firstpod env=testing     attaching label to the pod.
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl label --overwrite   pod firstpod env=dev       renaming the label pod
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl  label  pod firstpod run-             unleveling the pod or deleting the pod.
+[iid@iid demo-maven-springboot-with-kubernetes]$ kubectl label pods --all status=xyz    attaching the label to the all pod in cluster
+[iid@iid kubernetesprac]$ kubectl get pod --show-labels        ---showing the label of the pod.
+[iid@iid kubernetesprac]$ kubectl run --dry-run=client firstpod --image=coolgourav147/nginx-custom     :--running command in dry-run mode.only for syntax check.
+[iid@iid kubernetesprac]$ kubectl delete pod --all                            :--it will delete the all pod on server.
+[iid@iid kubernetesprac]$ kubectl explain pod --recursive |less     :--it will show the properties of the object.
+[iid@iid kubernetesprac]$ kubectl edit pod thirdpod        :-for editing the object in kubernetes
+[iid@iid kubernetesprac]$ kubectl delete -f  thirdpod.yaml    :--deleting the pod using the yaml.
+[iid@iid kubernetesprac]$ kubectl apply -f thirdpod.yaml --dry-run=server    :--server side dry run
+[iid@iid kubernetesprac]$ kubectl diff -f firstpod.yaml     :--it will show what is going changed in the current object.
+[iid@iid kubernetesprac]$ docker container exec -it fe9d494d8c6d env       :-using this command we can see the environment variable.
+[iid@iid kubernetesprac]$ kubectl exec postgres1 env       :-using this command ,you can see the environment info within pod.
+[iid@iid kubernetesprac]$ kubectl exec postgres1 -c fe9d494d8c6d env   :-postgres1 is the pod and within this pod fe9d494d8c6d is the conatiner.we are seeing the environment info of fe9d494d8c6d this conatiner which is running postgres1 pod.
+[iid@iid kubernetesprac]$ kubectl exec firstpod -c 3d0da66ce14a -it ls /    :-listing  the directory of container within pod
+[iid@iid kubernetesprac]$ grep name multi-container.yaml     :--it will display the name from multi-container.yaml file.
+[iid@iid kubernetesprac]$ kubectl exec -it  cmdpod -c cmdcontainer -- bin/bash   :--using this command we exec cmdcontainer which is running within cmdpod.
+root@cmdpod:/# netcat -l -p 9090    :-cmpod will start to listen on port 9090  and all container will share same network within pod.
+root@cmdpod:/# telnet localhost 9090   :--within pod two container can communicate to eachother.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

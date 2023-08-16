@@ -1,0 +1,64 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: thirdpod
+  name: thirdpod
+spec:
+  containers:
+  - image: coolgourav147/nginx-custom
+    name: thirdpod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-08-15T16:59:51Z"
+  labels:
+    run: thirdpod
+  name: thirdpod
+  namespace: default
+  resourceVersion: "4641"
+  selfLink: /api/v1/namespaces/default/pods/thirdpod
+  uid: 2e1cafa9-278f-45f6-9615-e26731862f32
+spec:
+  containers:
+  - image: coolgourav147/nginx-custom
+    imagePullPolicy: Always
+    name: thirdpod
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-gk2ng
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-gk2ng
+    secret:
+      defaultMode: 420
+      secretName: default-token-gk2ng
+status:
+  phase: Pending
+  qosClass: BestEffort

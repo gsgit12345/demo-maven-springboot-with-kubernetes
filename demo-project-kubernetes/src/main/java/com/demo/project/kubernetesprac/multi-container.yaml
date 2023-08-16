@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+     name: cmdpod
+     labels:
+        env: dev
+        dev: dev
+spec:
+  containers:
+      - name: cmdcontainer
+        image: coolgourav147/nginx-custom
+        env:
+          - name: MY_DEMO
+            value: password
+        args: ["sleep","3600"]
+      - name: secondcontainer
+        image: coolgourav147/nginx-custom
