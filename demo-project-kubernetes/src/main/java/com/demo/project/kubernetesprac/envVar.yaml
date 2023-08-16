@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+     name: firstpod
+     labels:
+        env: dev
+        dev: dev
+spec:
+  containers:
+      - name: firstpod
+        image: coolgourav147/nginx-custom
+        env:
+          - name: MY_PASSWORD
+            value: password

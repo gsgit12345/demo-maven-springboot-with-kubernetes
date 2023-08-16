@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
-http://maven.apache.org/xsd/maven-4.0.0.xsd">  
-  
-  <modelVersion>4.0.0</modelVersion>  
-  <groupId>com.demo.project</groupId>
-  <artifactId>demo-maven-springboot-with-kubernetes</artifactId>
-  <version>1.0</version>
-    <modules>
-        <module>demo-project-kubernetes</module>
-    </modules>
 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>demo-maven-springboot-with-kubernetes</artifactId>
+        <groupId>com.demo.project</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <packaging>pom</packaging>
+    <artifactId>demo-project-kubernetes</artifactId>
 
-  <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
-    <spring-boot.version>2.7.14</spring-boot.version>
-  </properties>
+    <name>demo-project-kubernetes</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <spring-boot.version>2.7.14</spring-boot.version>
+    </properties>
 
     <dependencies>
         <dependency>
