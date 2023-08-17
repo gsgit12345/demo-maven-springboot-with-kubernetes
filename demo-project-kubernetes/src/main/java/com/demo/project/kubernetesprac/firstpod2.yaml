@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-     name: firstpod
+     name: firstpod2
      labels:
         env: dev
         type: dev
 spec:
   containers:
-      - name: firstpod
-        image: coolgourav147/nginx-custom
+      - name: firstpod2
+        image: coolgourav147/nginx-custom:v1

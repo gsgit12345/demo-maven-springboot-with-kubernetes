@@ -1,5 +1,5 @@
 Why we use kubernetes
-
+https://www.edureka.co/blog/interview-questions/kubernetes-interview-questions/
 for auto-completion ,installed the below package
 [iid@iid ~]$ sudo install bash-completion
 >>echo $SHELL
@@ -36,6 +36,11 @@ and the
 [iid@iid kubernetesprac]$ kubectl exec -it  cmdpod -c cmdcontainer -- bin/bash   :--using this command we exec cmdcontainer which is running within cmdpod.
 root@cmdpod:/# netcat -l -p 9090    :-cmpod will start to listen on port 9090  and all container will share same network within pod.
 root@cmdpod:/# telnet localhost 9090   :--within pod two container can communicate to eachother.
+[iid@iid kubernetesprac]$ kubectl expose pod firstpod --port=8000 --target-port=80 --name myfirstservice   :-creating first service and exposing pod.
+use curl ipaddressofclusterip:portnumber
+[iid@iid kubernetesprac]$ kubectl expose pod firstpod --type=NodePort --port=8000 --target-port=80 --name myfirstservice1   :-now you can access from browser using NodePortip:portnumber
+
+
 
 
 
