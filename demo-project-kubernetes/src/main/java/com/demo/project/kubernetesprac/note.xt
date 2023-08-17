@@ -39,6 +39,14 @@ root@cmdpod:/# telnet localhost 9090   :--within pod two container can communica
 [iid@iid kubernetesprac]$ kubectl expose pod firstpod --port=8000 --target-port=80 --name myfirstservice   :-creating first service and exposing pod.
 use curl ipaddressofclusterip:portnumber
 [iid@iid kubernetesprac]$ kubectl expose pod firstpod --type=NodePort --port=8000 --target-port=80 --name myfirstservice1   :-now you can access from browser using NodePortip:portnumber
+[iid@iid kubernetesprac]$ kubectl explain rc --recursive |less   :-you can see the resource property
+[iid@iid kubernetesprac]$ kubectl apply -f replicationcontr.yaml --dry-run=client    :--dry run with yaml file.
+[iid@iid kubernetesprac]$ kubectl delete rc --cascade=false  firstreplica  :--it will delete replicationcontroller but not pod.
+[iid@iid kubernetesprac]$ kubectl scale rc --replicas=7 firstreplica      :-it increases the replica in k8s cluster
+
+
+
+
 
 
 
