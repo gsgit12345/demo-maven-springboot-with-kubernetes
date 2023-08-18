@@ -43,6 +43,8 @@ use curl ipaddressofclusterip:portnumber
 [iid@iid kubernetesprac]$ kubectl apply -f replicationcontr.yaml --dry-run=client    :--dry run with yaml file.
 [iid@iid kubernetesprac]$ kubectl delete rc --cascade=false  firstreplica  :--it will delete replicationcontroller but not pod.
 [iid@iid kubernetesprac]$ kubectl scale rc --replicas=7 firstreplica      :-it increases the replica in k8s cluster
+[iid@iid kubernetesprac]$ kubectl edit rc firstreplica      :-using this command you can edit any object,.
+
 
 
 

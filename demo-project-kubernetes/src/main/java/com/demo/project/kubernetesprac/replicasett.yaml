@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+    name: firstreplicaset
+    labels:
+      appname: votingapp
+spec:
+  replicas: 5
+  selector:
+     matchLabels:
+        type: frontend
+  template:
+     metadata:
+          name: firstpod
+          labels:
+             env: prod
+             type: frontend
+     spec:
+       containers:
+           - name: firstpod
+             image: coolgourav147/nginx-custom
+
