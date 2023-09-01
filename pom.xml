@@ -11,6 +11,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modules>
         <module>demo-project-kubernetes</module>
         <module>demo-project-book-mark</module>
+        <module>demo-project-awseks-project</module>
     </modules>
 
 
