@@ -1,0 +1,11 @@
+https://k21academy.com/kubernetes/?utm_source=website&utm_medium=referral&utm_campaign=kubernetes_footer
+
+https://www.youtube.com/watch?v=1lZdI8BInWc&list=PLuVrvwRQWy6QQDBe11vKD-haZZr7MLvPB
+
+https://www.youtube.com/watch?v=IJBHIuURA3g&list=PLLh98oBzdb7YLnm-67RnNIjrD98g1w2js
+
+
+https://github.com/stacksimplify/aws-eks-kubernetes-masterclass   --github
+https://github.com/stacksimplify/kubernetes-fundamentals
+
+https://github.com/stacksimplify/docker-fundamentals
